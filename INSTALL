@@ -1,0 +1,15 @@
+
+1. download and install HDF5 v1.10.4 from https://www.hdfgroup.org/downloads/hdf5/source-code/
+from the source tree execute.:
+```
+./configure --prefix=/usr/local --enable-build-mode=production --enable-shared --enable-static --enable-optimization=high --with-default-api-version=v110
+make -j4
+sudo make install
+```
+NOTE: the system is often shipped with existing hdf5 installation, the supplied CMAKE will be looking in `/usr/local` first. 
+
+2. install libh5cpp-dev:
+	a. copy and ship the content of h5cpp/* with your distribution
+    b. `sudo make install`
+	c. ./configure && make install
+
